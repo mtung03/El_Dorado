@@ -1,20 +1,23 @@
 /* buyer dash stylesheet */
 
 .header {
-        border-bottom: 2px solid black;
-        display: block;
+        position: relative;
         width: 100%;
 }
 
 .projects {
+        position: relative;
         float: left;
 }
 
 .mailbox {
+        position: relative;
         float: right;
 }
 
 .dashboard {
+        border-top: 2px solid black;
+        position: relative;
         clear: both;
 }
 
@@ -23,6 +26,8 @@
 }
 
 #account-buttons {
-        display: block;
-        float: right;
+float: right;
+  display: inline-block;
+  padding-bottom: 2px;
+  position: relative;
 }
