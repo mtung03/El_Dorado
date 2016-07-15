@@ -5,6 +5,7 @@
         width: 100%;
 }
 
+
 .projects {
         position: relative;
         float: left;
@@ -16,9 +17,34 @@
 }
 
 .dashboard {
+        width: 100%;
         border-top: 2px solid black;
         position: relative;
         clear: both;
+}
+
+.section {
+        display: inline-block;
+        border: 1px solid black;
+        width: 49%;
+}
+
+#projects {
+        float: left;
+}
+
+#mailbox {
+        float: right;
+}
+
+td {
+        border: 1px solid black;
+}
+
+.section-head {
+        text-decoration: underline;
+        text-align: center;
+        border: 1px solid red;
 }
 
 #logo {
@@ -26,8 +52,14 @@
 }
 
 #account-buttons {
-float: right;
-  display: inline-block;
-  padding-bottom: 2px;
-  position: relative;
+        float: right;
+         display: inline-block;
+         padding-bottom: 2px;
+        position: relative;
+}
+
+#logo {
+        float: left;
+        display: inline-block;
+        position: relative;
 }
