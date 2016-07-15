@@ -1,0 +1,22 @@
+/* buyer dash stylesheet */
+
+.header {
+        border-bottom: 2px solid black;
+        width: 100%;
+}
+
+.projects {
+        float: left;
+}
+
+.mailbox {
+        float: right;
+}
+
+#logo {
+        float: right;
+}
+
+#account-buttons {
+        float: right;
+}
