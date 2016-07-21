@@ -1,21 +1,50 @@
 /* buyer dash stylesheet */
 
 .header {
-        border-bottom: 2px solid black;
-        display: block;
+        position: relative;
         width: 100%;
 }
 
+
 .projects {
+        position: relative;
         float: left;
 }
 
 .mailbox {
+        position: relative;
         float: right;
 }
 
 .dashboard {
+        width: 100%;
+        border-top: 2px solid black;
+        position: relative;
         clear: both;
+}
+
+.section {
+        display: inline-block;
+        border: 1px solid black;
+        width: 49%;
+}
+
+#projects {
+        float: left;
+}
+
+#mailbox {
+        float: right;
+}
+
+td {
+        border: 1px solid black;
+}
+
+.section-head {
+        text-decoration: underline;
+        text-align: center;
+        border: 1px solid red;
 }
 
 #logo {
@@ -23,6 +52,14 @@
 }
 
 #account-buttons {
-        display: block;
         float: right;
+         display: inline-block;
+         padding-bottom: 2px;
+        position: relative;
+}
+
+#logo {
+        float: left;
+        display: inline-block;
+        position: relative;
 }
