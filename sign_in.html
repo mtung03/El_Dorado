@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Portal">
 
 <head>
         <meta charset="utf-8">
         <title>Sign In</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
         <script type="text/javascript" src="scripts/sign_in.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
 </head>
 
-<body onload="init()">
+<body ng-controller="SignInController">
 
-<form id="sign-in-box" action="form_action.asp">
+<form class="simple-form" id="sign-in-box" nonvalidate>
         <div id="header">El Dorado</div>
-        <p>Username: <input type="text" name="username" id="username_input"/></p>
-        <p>Password: <input type="text" name="pword" id="password_input" key/></p>
-        <input type="button" onclick="verify()" value="Submit"/>
+        Username: <input ng-model="username" type="text" id="username_input"/>
+        Password: <input type="text" ng-model="password" ng-keypress="keypressCredentials($event)" id="password_input" key/>
+        <div type="button" ng-click="verify()">Submit</div>
 </form>
 
 </form>
