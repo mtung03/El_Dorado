@@ -7,18 +7,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
         <script type="text/javascript" src="scripts/sign_in.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
+        <link rel="stylesheet" href="stylesheets/sign-in_style.css"/>
 </head>
 
 <body ng-controller="SignInController">
-
-<form class="simple-form" id="sign-in-box" nonvalidate>
-        <div id="header">El Dorado</div>
-        Username: <input ng-model="username" type="text" id="username_input"/>
-        Password: <input type="text" ng-model="password" ng-keypress="keypressCredentials($event)" id="password_input" key/>
-        <div type="button" ng-click="verify()">Submit</div>
-</form>
-
+<div id="form-wrapper">
+        <form class="simple-form" id="sign-in-box" nonvalidate>
+                <div id="header">El Dorado</div>
+                Username: <input ng-model="username" type="text" id="username_input"/>
+                Password: <input type="text" ng-model="password" ng-keypress="keypressCredentials($event)" id="password_input" key/>
+                <div type="button" ng-click="verify()">Submit</div>
+        </form>
+</div>
 </form>
 </body>
 </html>

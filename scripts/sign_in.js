@@ -21,7 +21,7 @@
 
 var PortalApp = angular.module("Portal", []);
 
-PortalApp.controller("SignInController", function($scope) {
+PortalApp.controller("SignInController", function($scope, $http) {
         $scope.username = "";
         $scope.password = "";
         $scope.verify = function() {
@@ -39,4 +39,21 @@ PortalApp.controller("SignInController", function($scope) {
                 }
         }
 
+});
+
+PortalApp.controller("AccountRequestController", function($scope, $http) {
+        $scope.accountName = "";
+        $scope.companyName = "";
+        $scope.buyerAccount = 1;
+        $scope.email = "";
+
+        $scope.sendAccountRequest = function() {
+                var data = "accountName=" + $scope.accountName + "&companyName=" + $scope.companyName + "&buyerAccount=" + $scope.buyerAccount + "&email=" + $scope.email;
+                console.log(data);
+                var req = {
+                        method: "POST",
+                        url: /* insert here */,
+                        data: data
+                }
+        }
 });
