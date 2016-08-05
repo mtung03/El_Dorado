@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="Portal">
 <head>
 	<title>Sign Up Page</title>
 	<meta charset="utf-8">
@@ -8,11 +8,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"> </script>
+    <script src="scripts/sign_in.js"></script>
     <link rel="stylesheet" href="stylesheets/sign_up.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
 
 </head>
-<body>
+<body ng-controller="AccountRequestController">
 	<div id="navbar">
 		<div id="choices-div">
 		    <ul id="index-ul">
@@ -27,9 +28,33 @@
 	<div class="white-bar wb-right"></div>
 	<div id="footer"></div>
    <div id="image-back">
-	<form novalidate class="simple-form">
-		<<h1 class = "title"> Request For Sign Up </h1> 
+	<form class="form">
+		 <h1 class = "title"> Request For Sign Up </h1> 
+		 <p>
+		 	<div class= "input-fields">  Name: </div>
+		 	<input ng-model="accountName" type="text" class= "form-input"/> 
+		 </p>
 
+		  <p>
+		 	<div class= "input-fields">  Company Name: </div>
+			<input ng-model= "companyName" type="text" class= "form-input"/> 
+		 </p>
+
+		  <p>
+		 	<div class= "input-fields">  Account type: </div>
+		 	<select class= "form-input select-style">
+		 		<option value="Buyer">Buyer</option>
+		 		<option value="Seller">Seller</option>
+		 	</select>
+		 </p>
+
+		  <p>
+		 	<div class= "input-fields"> Email: </div>
+		 	<input ng-model= "email" type="text" class= "form-input"/>
+		 </p>
+           <div ng-click="sendAccountRequest()" class= "request-div">
+              <div class="request-button"> Submit </div>
+           </div>
 	<form>
 	</div>
 </body>
