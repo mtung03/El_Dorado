@@ -1,3 +1,131 @@
+html {
+        height: 100vh;
+
+
+}
+body {
+        
+        height:100%;
+        width:100%;
+  overflow-x:hidden;
+ /* overflow-y:hidden;*/
+  margin: 0px;
+
+
+}
+
+a {
+
+  text-decoration: none;
+}
+
+#wrapper{
+ margin-left: auto;
+ margin-right: auto;
+ width:960px;
+
+}
+
+#image-back {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/IMG_0023.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#navbar {
+         
+                height: 55px;
+                width:100%;
+                background-color: #FFFAF0;
+
+        
+                
+}
+
+
+
+.navbar-buttons{
+    border-style: solid;
+    background-color:#4169E1;
+    border-color: #4169E1;
+    border-width: 2px;
+    /*border-radius: 10px;*/
+    }
+
+
+
+.list-elems {
+
+    font-family: 'Muli', "Courier New";
+    color:#FFFAF0;
+    font-weight: 100;
+    font-size: 15px;
+    display:inline;
+    margin-right: 30px;
+    padding:5px;
+
+
+
+}
+
+.navbar-ul {
+
+        list-style-type: none;
+}
+
+.navbar-li {
+ 
+}
+
+.title-style {
+        margin:0px;
+        font-family: 'Muli', "Courier New";
+    color:#000000;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+#title {
+        height:40px;
+        width: 200px;
+        padding-left:20px;
+        display:inline-block;
+
+}
+#index-div {
+        height: 55px;
+  width:100%;
+        padding-top: 15px;
+  overflow:hidden;
+}
+#choices-div {
+   height:40px;
+   width:320px;
+   float:right;
+   display:inline-block;
+   margin-right:0;
+   padding-top: 10px;
+  
+}
+.index-choices {
+        
+        font-family: 'Muli', "Courier New";
+        color:#FFFAF0;
+        font-weight: 100;
+        font-size: 20px;
+        display:inline;
+        padding-right: 20px;
+}
+
+#index-ul {
+        margin:0px;
+        padding-top:8px;
+        height: 40px;
+        width:400px;
+}
+
 #sign-in-box {
 	top: 0px;
 	bottom: 0px;
@@ -5,8 +133,12 @@
 	right: 0px;
 	width: 350px;
 	height:50%;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
 }
 
 #form-wrapper {
         padding-left: calc(50% - 175px);
+        margin-top: 10%;
 }

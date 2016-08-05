@@ -12,15 +12,40 @@
 </head>
 
 <body ng-controller="SignInController">
-<div id="form-wrapper">
-        <form class="simple-form" id="sign-in-box" nonvalidate>
-                <div id="header">El Dorado</div>
-                Username: <input ng-model="username" type="text" id="username_input"/>
-                Password: <input type="text" ng-model="password" ng-keypress="keypressCredentials($event)" id="password_input" key/>
-                <div type="button" ng-click="verify()">Submit</div>
-        </form>
-</div>
-</form>
+        <div id="navbar">
+                <div id="choices-div">
+                    <ul id="index-ul">
+                        <a href="sign_in.html"><li class="list-elems navbar-buttons">Sign In</li></a>
+                        <li class="list-elems navbar-buttons">Help</li>
+                        <a href="about.html"><li class="list-elems navbar-buttons">About</li></a>
+                    </ul>
+                </div>
+
+        </div>
+        <div class="white-bar wb-left"></div>   
+        <div class="white-bar wb-right"></div>
+        <div id="footer"></div>
+        <div id="image-back">
+        <div id="form-wrapper">
+                <form class="simple-form" nonvalidate>
+                        <table id="sign-in-box">
+                                <tr id="box-header">
+                                        <th colspan="2">El Dorado</th>
+                                </tr>
+                                <tr id="username">
+                                        <td>Username: </td>
+                                        <td><input ng-model="username" type="text" id="username_input"/></td>
+                                </tr>
+                                <tr id="password">
+                                        <td>Password: </td>
+                                        <td><input type="text" ng-model="password" ng-keypress="keypressCredentials($event)" id="password_input" key/></td>
+                                <tr id="submit-button"><td>
+                                <button ng-click="verify()">Submit</button>
+                                </td></tr>
+                        <table>
+                </form>
+        </div>
+        </div>
 </body>
 </html>
 
