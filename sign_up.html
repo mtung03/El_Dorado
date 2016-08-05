@@ -42,15 +42,15 @@
 
 		  <p>
 		 	<div class= "input-fields">  Account type: </div>
-		 	<select class= "form-input select-style">
-		 		<option value="Buyer">Buyer</option>
-		 		<option value="Seller">Seller</option>
+		 	<select ng-model="buyerAccount" class= "form-input select-style">
+		 		<option value="1">Buyer</option>
+		 		<option value="0">Seller</option>
 		 	</select>
 		 </p>
 
 		  <p>
 		 	<div class= "input-fields"> Email: </div>
-		 	<input ng-model= "email" type="text" class= "form-input"/>
+		 	<input ng-model= "email" type="text" class= "form-input" ng-keypress="keypressRequest($event)"/>
 		 </p>
            <div ng-click="sendAccountRequest()" class= "request-div">
               <div class="request-button"> Submit </div>

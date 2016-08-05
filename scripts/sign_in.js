@@ -50,10 +50,16 @@ PortalApp.controller("AccountRequestController", function($scope, $http) {
         $scope.sendAccountRequest = function() {
                 var data = "accountName=" + $scope.accountName + "&companyName=" + $scope.companyName + "&buyerAccount=" + $scope.buyerAccount + "&email=" + $scope.email;
                 console.log(data);
-                var req = {
-                        method: "POST",
-                        url: /* insert here */,
-                        data: data
+                // var req = {
+                //         method: "POST",
+                //         url: /* insert here */,
+                //         data: data
+                // }
+        }
+
+        $scope.keypressRequest = function(keyEvent) {
+                if(keyEvent.which === 13) {
+                        $scope.sendAccountRequest();
                 }
         }
 });
