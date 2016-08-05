@@ -37,7 +37,7 @@ a {
 	 
 		height: 55px;
 		width:100%;
-		background-color: #F8F8FF;
+		background-color: #FFFFFF;
 
 	
 		
@@ -47,8 +47,8 @@ a {
 
 .navbar-buttons{
     border-style: solid;
-    background-color:#4169E1;
-    border-color: #4169E1;
+    background-color:#23C4EB;
+    border-color: #23C4EB;
     border-width: 2px;
     /*border-radius: 10px;*/
     }
@@ -58,7 +58,7 @@ a {
 .list-elems {
 
     font-family: 'Muli', "Courier New";
-    color:#F8F8FF;
+    color:#FFFFFF;
     font-weight: 100;
     font-size: 15px;
     display:inline;
@@ -111,7 +111,7 @@ a {
 .index-choices {
 	
   	font-family: 'Muli', "Courier New";
-  	color:#F8F8FF;
+  	color:#FFFFFF;
   	font-weight: 100;
   	font-size: 20px;
   	display:inline;
@@ -128,8 +128,8 @@ a {
 
 .button-signup{
     border-style: solid;
-  	background-color:#4169E1;
-    border-color: #4169E1;
+  	background-color:#23C4EB;
+    border-color: #23C4EB;
   	border-width: 2px;
     /*border-radius: 10px;*/
     width: 190px;
@@ -145,8 +145,8 @@ a {
   width: 145px;
     height:30px;
      border-style: solid;
-    background-color: #4169E1;
-    border-color:#4169E1;
+    background-color: #23C4EB;
+    border-color:#23C4EB;
     border-width: 2px;
     /*border-radius: 10px;*/
     text-align: center;
@@ -160,7 +160,7 @@ a {
    width: 145px;
     height:30px;
     font-family: 'Muli', "Courier New";
-    color:#F8F8FF;
+    color:#FFFFFF;
     font-weight: 100;
     font-size: 17px;
     text-align: center;
@@ -173,7 +173,7 @@ a {
   height:30px;
   width:190px;
   font-family: 'Muli', "Courier New";
-  color:#F8F8FF;
+  color:#FFFFFF;
   font-weight: 100;
   font-size: 17px;
   text-align: center;
@@ -194,7 +194,7 @@ a {
    margin-right: auto;
    text-align:center;
    font-family: 'Muli', "Courier New";
-  color:  #F8F8FF;
+  color:  #FFFFFF;
 
   font-weight: 100;
   font-size: 35px;
@@ -223,7 +223,7 @@ a {
 #option1 {
    text-align:center;
    font-family: 'Muli', "Courier New";
-  color:  #F8F8FF;
+  color:  #FFFFFF;
     background-color: rgba(0,0,0,0.3);
     float:left;
     display:inline-block;
@@ -235,7 +235,7 @@ a {
 #option2 {
   text-align:center;
    font-family: 'Muli', "Courier New";
-  color:  #F8F8FF;
+  color:  #FFFFFF;
   background-color: rgba(0,0,0,0.3);
  float:right;
 display:inline-block;
@@ -245,7 +245,7 @@ display:inline-block;
 }
 .border{
     border-style: solid;
-    border-color: #F8F8FF;
+    border-color: #FFFFFF;
     border-width: 2px;
 }
 .style-h1{
@@ -255,7 +255,7 @@ display:inline-block;
 }
 .style-h2 {
 	font-family: 'Muli', "Courier New";
-  	color:#F8F8FF;
+  	color:#FFFFFF;
   	font-weight: 100;
   	font-size: 20px;
   	top:0;
@@ -270,7 +270,7 @@ display:inline-block;
 
   width:10px;
   height:100%;
-  background-color: #F8F8FF;
+  background-color: #FFFFFF;
   
 }
 
@@ -289,7 +289,7 @@ display:inline-block;
   height:10px;
   bottom: 0;
   width: 100%;
-  background-color: #F8F8FF;
+  background-color: #FFFFFF;
 
 }
 

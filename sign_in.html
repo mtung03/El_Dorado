@@ -26,9 +26,23 @@
         <div class="white-bar wb-right"></div>
         <div id="footer"></div>
         <div id="image-back">
-        <div id="form-wrapper">
-                <form class="simple-form" nonvalidate>
-                        <table id="sign-in-box">
+        
+                <form class="form" nonvalidate>
+                    <h1 class = "title"> Sign In </h1> 
+                    <p>
+                        <div class= "input-fields">  Username: </div>
+                        <input ng-model="username" type="text"class= "form-input"/> 
+                    </p>
+
+                    <p>
+                         <div class= "input-fields">  Password: </div>
+                        <input ng-model="username" type="text" ng-keypress="keypressCredentials($event)" class= "form-input" key/> 
+                    </p>
+                    <div ng-click="verify()" class= "request-div">
+                         <div class="request-button"> Submit </div>
+                    </div>
+
+                      <!--   <table id="sign-in-box">
                                 <tr id="box-header">
                                         <th colspan="2">El Dorado</th>
                                 </tr>
@@ -42,9 +56,9 @@
                                 <tr id="submit-button"><td>
                                 <button ng-click="verify()">Submit</button>
                                 </td></tr>
-                        <table>
+                        <table> -->
                 </form>
-        </div>
+  
         </div>
 </body>
 </html>
