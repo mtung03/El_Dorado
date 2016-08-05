@@ -1,0 +1,142 @@
+/* stylesheet for help and about pages */
+html {
+        height: 100vh;
+
+
+}
+body {
+        
+        height:100%;
+        width:100%;
+  overflow-x:hidden;
+ /* overflow-y:hidden;*/
+  margin: 0px;
+
+
+}
+
+a {
+
+  text-decoration: none;
+}
+
+#wrapper{
+ margin-left: auto;
+ margin-right: auto;
+ width:960px;
+
+}
+
+#image-back {
+  height: 100%;
+  width: 100%;
+
+}
+#navbar {
+         
+ height: 55px;
+ width:100%;
+ background-color: #FFFFFF;
+                
+}
+
+
+
+.navbar-buttons{
+    border-style: solid;
+    background-color:#23C4EB;
+    border-color: #23C4EB;
+    border-width: 2px;
+    
+     border-radius: 5px;
+    }
+
+
+
+.list-elems {
+
+    font-family: 'Muli', "Courier New";
+    color:#FFFFFF;
+    font-weight: 100;
+    font-size: 15px;
+    display:inline;
+    margin-right: 30px;
+    padding:5px;
+
+
+
+}
+
+.navbar-ul {
+
+        list-style-type: none;
+}
+
+.navbar-li {
+ 
+}
+
+.title-style {
+        margin:0px;
+        font-family: 'Muli', "Courier New";
+    color:#000000;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+#title {
+        height:40px;
+        width: 200px;
+        padding-left:20px;
+        display:inline-block;
+
+}
+#index-div {
+        height: 55px;
+  width:100%;
+        padding-top: 15px;
+  overflow:hidden;
+}
+#choices-div {
+   height:40px;
+   width:320px;
+   float:right;
+   display:inline-block;
+   margin-right:0;
+   padding-top: 10px;
+  
+}
+.index-choices {
+        
+        font-family: 'Muli', "Courier New";
+        color:#FFFFFF;
+        font-weight: 100;
+        font-size: 20px;
+        display:inline;
+        padding-right: 20px;
+}
+
+#index-ul {
+        margin:0px;
+        padding-top:8px;
+        height: 40px;
+        width:400px;
+}
+
+
+.info-content {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+
+
+.title {
+  font-family: 'Muli', "Courier New";
+  margin: 0px;
+  text-align: left;
+  color: #696969;
+
+}
