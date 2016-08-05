@@ -1,32 +1,13 @@
 /* sign_in.js */
 
-// var request = new XMLHttpRequest();
+var PortalApp = angular.module("Portal", ['ngSanitize']);
 
-// request.open("GET", "data/accounts.json", true);
-
-
-
-// function verify() {
-//         var uName = document.getElementById("username_input");
-//         var pWord = document.getElementById("password_input");
-
-//         var accountData = request.responseText;
-//         console.log(accountData);
-//         var accounts = JSON.parse(accountData);
-
-//         console.log(accounts[uName] == pWord);
-//         console.log(uName.value);
-//         console.log(pWord.value);
-// }
-
-var PortalApp = angular.module("Portal", []);
-
-PortalApp.controller("SignInController", function($scope, $http) {
+PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
         $scope.username = "";
         $scope.password = "";
         $scope.verify = function() {
-                console.log("username "+ $scope.username);
-                console.log("password "+ $scope.password);
+                console.log("username "+ $sanitize($scope.username));
+                console.log("password "+ $sanitize($scope.password));
                 if ($scope.username == "maxtung" && $scope.password == "secret") {
                         console.log("signed in!");
                 } else {
@@ -41,14 +22,14 @@ PortalApp.controller("SignInController", function($scope, $http) {
 
 });
 
-PortalApp.controller("AccountRequestController", function($scope, $http) {
+PortalApp.controller("AccountRequestController", function($scope, $http, $sanitize) {
         $scope.accountName = "";
         $scope.companyName = "";
         $scope.buyerAccount = 1;
         $scope.email = "";
 
         $scope.sendAccountRequest = function() {
-                var data = "accountName=" + $scope.accountName + "&companyName=" + $scope.companyName + "&buyerAccount=" + $scope.buyerAccount + "&email=" + $scope.email;
+                var data = "accountName=" + $sanitize($scope.accountName) + "&companyName=" + $sanitize($scope.companyName) + "&buyerAccount=" + $sanitize($scope.buyerAccount) + "&email=" + $sanitize($scope.email);
                 console.log(data);
                 // var req = {
                 //         method: "POST",

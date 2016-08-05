@@ -163,8 +163,8 @@ a {
   border: 1px solid #23C4EB;
   border-radius: 5px;
   font-size: 16px;
-font-weight: bold;
-font-family: 'Muli', "Courier New";
+  font-weight: bold;
+  font-family: 'Muli', "Courier New";
 }
 
 .input-fields {
