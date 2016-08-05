@@ -50,7 +50,7 @@ a {
     background-color:#23C4EB;
     border-color: #23C4EB;
     border-width: 2px;
-    /*border-radius: 10px;*/
+    border-radius: 5px;
     }
 
 
@@ -131,7 +131,8 @@ a {
   	background-color:#23C4EB;
     border-color: #23C4EB;
   	border-width: 2px;
-    /*border-radius: 10px;*/
+   
+     border-radius: 5px;
     width: 190px;
     height:30px;
     padding-left:4px;
@@ -148,7 +149,7 @@ a {
     background-color: #23C4EB;
     border-color:#23C4EB;
     border-width: 2px;
-    /*border-radius: 10px;*/
+   border-radius: 5px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
