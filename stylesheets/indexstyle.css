@@ -37,10 +37,7 @@ a {
 	 
 		height: 55px;
 		width:100%;
-		background-color: #FFFFFF;
-
-	
-		
+		background-color: #FFFFFF;		
 }
 
 
@@ -284,8 +281,6 @@ display:inline-block;
 
 .wb-right{
   float:right;
- 
-
 }
 
 #footer {
