@@ -1,17 +1,18 @@
 <!doctype html>
-<html>
+<html ng-app="Portal">
 <head>
         <title>El Dorado Buyer Dash</title>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
         <script type="text/javascript" src="scripts/sign_in.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
         <link rel="stylesheet" href="stylesheets/sign-in_style.css"/>   
         <link rel="stylesheet" href="stylesheets/buyerstyle.css" type="text/css"/>
 </head>
 
-<body>
+<body ng-controller="BuyerController">
         <div id="navbar">
                 <div id="choices-div">
                     <ul id="index-ul">
@@ -26,11 +27,17 @@
         <div class="white-bar wb-right"></div>
         <div id="footer"></div>
         <div id="image-back">
-                <div class="dashboard">
-                        <div class="section" id="projects">
+                <div class="dashboard"> 
+                        <ul class="tabrow">
+                            <li class="selected" ng-click="selectProjectTab()">Projects</li>
+                            <li ng-click="selectMailboxTab()">Mailbox</li>
+                            <li ng-click="selectRatingsTab()">Ratings</a></li>
+                        </ul>
+                        <div class="tabs">
+                        <div class="section" id="projects" ng-hide="hideProjects">
                                 <div class="section-head">My Projects</div>
                         </div>
-                        <div class="section" id="mailbox">
+                        <div class="section" id="mailbox" ng-hide="hideMailbox">
                                 <div class="section-head">Mailbox</div>
                                 <table>
                                         <tr class="table-head">
@@ -59,6 +66,9 @@
                                                 <td>June 8, 2016 3:30pm</td>
                                         </tr>
                                 </table>
+                        </div>
+                        <div class="section" id="ratings" ng-hide="hideRatings">
+                        <h2>hey</h2>
                         </div>
                 </div>
         </div>
