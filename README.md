@@ -5,15 +5,18 @@ connect buyers and sellers of products in the life sciences industry.
 
 Status:
 
-index.html/indexstyle.css - Initial mockup of the portal homepage done
-
-buyer_dash.html/buyerstyle.css - Barebones skeleton of what the dashboard will
-contain. More work to be done.
+views - html pages
+stylesheets - css
+scripts - javascript
+images - (should be self explanatory)
+data - not really relevant right now
 
 To-Do:
 
 seller_dash - dashboard of a seller account
-login page
-other interactive features and screen size responsiveness
+screen size responsiveness
+make logo for all pages
+general styling and content adding
+BACKEND
 
 Contributors: Suruchi Devanhalli, Chris Moody, and Max Tung
