@@ -1,0 +1,34 @@
+El Dorado Web App Style Guide
+
+For all files:
+
+Indents: 4 spaces (not tabs)
+Capitalization: all lowercase EXCEPT: angular modules and controllers
+
+For javascript functions and variables camelCase is preferred (e.g. exampleJavascriptFunction = function () )
+
+For css id and class names, uses dashes ('-') to separate lowercase words 
+(e.g. class="css-example-class")
+
+For file names, camelCase is also preferred.
+
+File structure should look like this:
+ |
+ +--views
+ |   + /* all html files here */
+ |
+ +--stylesheets
+ |   + /* all css files here */
+ |
+ +--scripts
+ |   + /* all js files here */
+ |
+ +--images
+ |   + /* image files here */
+ |
+ +--data
+ |   + /* example data here */
+ |
+ + README.md
+ + styleGuide.txt
+
