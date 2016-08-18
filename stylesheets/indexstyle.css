@@ -86,13 +86,16 @@ a {
     font-size: 30px;
 }
 
-#title {
+.title {
+  margin-top:10px;
+  margin-left: 11px;
 	height:40px;
 	width: 200px;
 	padding-left:20px;
 	display:inline-block;
-
+  background-image: url("../images/black_logo.jpg");
 }
+
 #index-div {
 	height: 55px;
   width:100%;
