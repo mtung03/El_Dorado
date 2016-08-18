@@ -76,7 +76,7 @@ a {
     width: 200px;
     padding-left: 20px;
     display: inline-block;
-    background-image: url("../images/black_logo.jpg");
+    background-image: url("/images/black_logo.jpg");
 }
 
 #index-div {
