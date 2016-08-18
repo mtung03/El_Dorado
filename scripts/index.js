@@ -49,24 +49,26 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
         $scope.hideProjects = false;
         $scope.hideMailbox  = true;
         $scope.hideRatings  = true;
-        console.log("buying");
 
         $scope.selectProjectTab = function() {
-                console.log("proj");
+                $("#mailTab, #ratingsTab").removeClass("selected");
+                $("#projectTab").addClass("selected");
                 $scope.hideProjects = false;
                 $scope.hideMailbox  = true;
                 $scope.hideRatings  = true;
         }
 
         $scope.selectMailboxTab = function() {
-                console.log("mail");
+                $("#projectTab, #ratingsTab").removeClass("selected");
+                $("#mailTab").addClass("selected");
                 $scope.hideProjects = true;
                 $scope.hideMailbox  = false;
                 $scope.hideRatings  = true;
         }
 
         $scope.selectRatingsTab = function() {
-                console.log("rate");
+                $("#mailTab, #projectTab").removeClass("selected");
+                $("#ratingsTab").addClass("selected");
                 $scope.hideProjects = true;
                 $scope.hideMailbox  = true;
                 $scope.hideRatings  = false;

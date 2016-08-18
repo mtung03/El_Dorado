@@ -28,9 +28,9 @@
     <div id="image-back">
         <div class="dashboard"> 
             <ul class="tabrow">
-                <li class="selected" ng-click="selectProjectTab()">Projects</li>
-                <li ng-click="selectMailboxTab()">Mailbox</li>
-                <li ng-click="selectRatingsTab()">Ratings</a></li>
+                <li class="selected" id="projectTab" ng-click="selectProjectTab()">Projects</li>
+                <li id="mailTab" ng-click="selectMailboxTab()">Mailbox</li>
+                <li id="ratingsTab" ng-click="selectRatingsTab()">Ratings</a></li>
             </ul>
 
             <div class="section" id="projects" ng-hide="hideProjects">
