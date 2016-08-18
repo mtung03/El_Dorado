@@ -2,49 +2,49 @@
 <html lang="en" ng-app="Portal">
 
 <head>
-        <meta charset="utf-8">
-        <title>Sign In</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
-        <script type="text/javascript" src="../scripts/index.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
-        <link rel="stylesheet" href="../stylesheets/signInStyle.css"/>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
+    <link rel="stylesheet" href="../stylesheets/signInStyle.css"/>
 </head>
 
 <body ng-controller="SignInController">
-        <div id="navbar">
-                <div id="choices-div">
-                    <ul id="index-ul">
-                        <a href="signIn.html"><li class="list-elems navbar-buttons">Sign In</li></a>
-                        <a href="help.html"><li class="list-elems navbar-buttons">Help</li></a>
-                        <a href="about.html"><li class="list-elems navbar-buttons">About</li></a>
-                    </ul>
-                </div>
-
+    <div id="navbar">
+        <div id="choices-div">
+            <ul id="index-ul">
+                <a href="signIn.html"><li class="list-elems navbar-buttons">Sign In</li></a>
+                <a href="help.html"><li class="list-elems navbar-buttons">Help</li></a>
+                <a href="about.html"><li class="list-elems navbar-buttons">About</li></a>
+            </ul>
         </div>
-        <div class="white-bar wb-left"></div>   
-        <div class="white-bar wb-right"></div>
-        <div id="footer"></div>
-        <div id="image-back">
-        
-                <form class="form" nonvalidate>
-                    <h1 class = "title"> Sign In </h1> 
-                    <p>
-                        <div class= "input-fields">  Username: </div>
-                        <input ng-model="username" type="text"class= "form-input"/> 
-                    </p>
+    </div>
+    
+    <div class="white-bar wb-left"></div>   
+    <div class="white-bar wb-right"></div>
 
-                    <p>
-                         <div class= "input-fields">  Password: </div>
-                        <input ng-model="password" type="text" ng-keypress="keypressCredentials($event)" class= "form-input" key/> 
-                    </p>
-                    <div ng-click="verify()" class= "request-div">
-                         <div class="request-button"> Submit </div>
-                    </div>
-                </form>
-  
-        </div>
+    <div id="image-back">
+        <form class="form" nonvalidate>
+            <h1 class = "title"> Sign In </h1> 
+            <p>
+                <div class= "input-fields">  Username: </div>
+                <input ng-model="username" type="text"class= "form-input"/> 
+            </p>
+
+            <p>
+                <div class= "input-fields">  Password: </div>
+                <input ng-model="password" type="text" ng-keypress="keypressCredentials($event)" class= "form-input" key/> 
+            </p>
+            <div ng-click="verify()" class= "request-div">
+                <div class="request-button"> Submit </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="footer"></div>
 </body>
 </html>
 
