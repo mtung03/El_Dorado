@@ -17,7 +17,11 @@ PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
                 console.log("username "+ $sanitize($scope.username));
                 console.log("password "+ $sanitize($scope.password));
 
-                if ($scope.password == $scope.validAccounts[$scope.username]) {
+                var account = $scope.validAccounts[$scope.username];
+
+                if (account == undefined) {
+                        console.log("account does not exist");
+                } else if ($scope.password == account.password) {
                         console.log("signed in!");
                 } else {
                         console.log("invalid!");

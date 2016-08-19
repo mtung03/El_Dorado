@@ -1,4 +1,14 @@
 {
-    "mtung":"password",
-    "user":"other"
+    "mtung": {
+        "password":"password",
+        "accountType": 1,
+        "companyName": "Max inc, LLC",
+        "email": "max@max.edu"
+    },
+    "ex_seller": {
+        "password":"other",
+        "accountType": 0,
+        "companyName":"Tufts University Manufacturing",
+        "email":"selling@tufts.edu"
+    }
 }
