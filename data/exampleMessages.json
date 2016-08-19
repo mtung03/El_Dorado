@@ -1,0 +1,16 @@
+{
+    "messages": [
+        {
+            "sender":"example vendor",
+            "subject":"quotes for your project",
+            "message":"Hi your project will cost $80!",
+            "timeSent":"January 8, 2016 8:00 EST"
+        },
+        {
+            "sender":"example vendor",
+            "subject":"quotes for your project",
+            "message":"Hi your project will cost $80!",
+            "timeSent":"January 8, 2016 8:00 EST"
+        }
+    ]
+}
