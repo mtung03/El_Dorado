@@ -1,0 +1,78 @@
+<!doctype html>
+<html ng-app="Portal">
+<head>
+    <title>El Dorado Seller Dashboard</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/scripts/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/signInStyle.css"/>   
+    <link rel="stylesheet" href="/stylesheets/buyerStyle.css"/>
+</head>
+
+<body ng-controller="SellerController">
+
+    <div id="navbar">
+        <div class="title"></div> 
+        <div id="choices-div">
+            <ul id="index-ul">
+                <a href="index.html"><li class="list-elems navbar-buttons">Sign Out</li></a>
+                <a href="help.html"><li class="list-elems navbar-buttons">Help</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="white-bar wb-left"></div>   
+    <div class="white-bar wb-right"></div>
+
+    <div id="image-back">
+        <div class="dashboard"> 
+            <ul class="tabrow">
+                <li class="selected" id="mailTab" ng-click="selectMailboxTab()">Mailbox</li>
+                <li id="templateTab" ng-click="selectTemplateTab()">My Templates</li>
+            </ul>
+
+            <div class="section" id="mailbox" ng-hide="hideMailbox">
+                    <div class="section-head">Mailbox</div>
+                    <table>
+                            <tr class="table-head">
+                                    <td>Sender</td>
+                                    <td>Subject</td>
+                                    <td>Date</td>
+                            </tr>
+                            <tr>
+                                    <td>Vendor Company</td>
+                                    <td>Quotes for your project</td>
+                                    <td>June 8, 2016 3:30pm</td>
+                            </tr>
+                            <tr>
+                                    <td>Vendor Company</td>
+                                    <td>Quotes for your project</td>
+                                    <td>June 8, 2016 3:30pm</td>
+                            </tr>
+                            <tr>
+                                    <td>Vendor Company</td>
+                                    <td>Quotes for your project</td>
+                                    <td>June 8, 2016 3:30pm</td>
+                            </tr>
+                            <tr>
+                                    <td>Vendor Company</td>
+                                    <td>Quotes for your project</td>
+                                    <td>June 8, 2016 3:30pm</td>
+                            </tr>
+                    </table>
+            </div>
+
+            <div class="section" id="templates" ng-hide="hideTemplates">
+                    <div class="section-head">My Templates</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>

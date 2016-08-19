@@ -9,11 +9,11 @@ views - html pages
 stylesheets - css
 scripts - javascript
 images - (should be self explanatory)
-data - not really relevant right now
+data - used as a fake backend database for now
 
 To-Do:
 
-seller_dash - dashboard of a seller account
+seller_dash - figure out what content will go there
 screen size responsiveness
 make logo for all pages
 general styling and content adding

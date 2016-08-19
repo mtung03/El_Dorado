@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app="Portal">
 <head>
-    <title>El Dorado Buyer Dash</title>
+    <title>El Dorado Buyer Dashboard</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -47,25 +47,10 @@
                                     <td>Subject</td>
                                     <td>Date</td>
                             </tr>
-                            <tr>
-                                    <td>Vendor Company</td>
-                                    <td>Quotes for your project</td>
-                                    <td>June 8, 2016 3:30pm</td>
-                            </tr>
-                            <tr>
-                                    <td>Vendor Company</td>
-                                    <td>Quotes for your project</td>
-                                    <td>June 8, 2016 3:30pm</td>
-                            </tr>
-                            <tr>
-                                    <td>Vendor Company</td>
-                                    <td>Quotes for your project</td>
-                                    <td>June 8, 2016 3:30pm</td>
-                            </tr>
-                            <tr>
-                                    <td>Vendor Company</td>
-                                    <td>Quotes for your project</td>
-                                    <td>June 8, 2016 3:30pm</td>
+                            <tr ng-repeat="message in mailbox.messages">
+                                    <td>{{message.sender}}</td>
+                                    <td>{{message.subject}}</td>
+                                    <td>{{message.timeSent}}</td>
                             </tr>
                     </table>
             </div>

@@ -31,12 +31,12 @@
             <h1 class = "title"> Sign In </h1> 
             <p>
                 <div class= "input-fields">  Username: </div>
-                <input ng-model="username" type="text"class= "form-input"/> 
+                <input ng-model="username" type="text" ng-keypress="keypressCredentials($event)" class="form-input"/> 
             </p>
 
             <p>
                 <div class= "input-fields">  Password: </div>
-                <input ng-model="password" type="text" ng-keypress="keypressCredentials($event)" class= "form-input" key/> 
+                <input ng-model="password" type="password" ng-keypress="keypressCredentials($event)" class= "form-input" /> 
             </p>
             <div ng-click="verify()" class= "request-div">
                 <div class="request-button"> Submit </div>

@@ -5,10 +5,23 @@ var PortalApp = angular.module("Portal", ['ngSanitize']);
 PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
         $scope.username = "";
         $scope.password = "";
+
+        $scope.validAccounts = {};
+
+        $http({
+                method: 'GET',
+                url: "/data/accounts.json"
+        }).then(function success(response) {
+                $scope.validAccounts = response.data;
+        }, function error(response) {
+                console.log("ERROR");
+        });
+        
         $scope.verify = function() {
                 console.log("username "+ $sanitize($scope.username));
                 console.log("password "+ $sanitize($scope.password));
-                if ($scope.username == "maxtung" && $scope.password == "secret") {
+                
+                if ($scope.password == $scope.validAccounts[$scope.username]) {
                         console.log("signed in!");
                 } else {
                         console.log("invalid!");
@@ -50,6 +63,18 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
         $scope.hideMailbox  = true;
         $scope.hideRatings  = true;
 
+        $scope.mailbox = {};
+
+        $http({
+                method: 'GET',
+                url: "/data/exampleMessages.json"
+        }).then(function success(response) {
+                $scope.mailbox = response.data;
+        }, function error(response) {
+                console.log("ERROR");
+        });
+
+
         $scope.selectProjectTab = function() {
                 $("#mailTab, #ratingsTab").removeClass("selected");
                 $("#projectTab").addClass("selected");
@@ -72,5 +97,24 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
                 $scope.hideProjects = true;
                 $scope.hideMailbox  = true;
                 $scope.hideRatings  = false;
+        }
+});
+
+PortalApp.controller("SellerController", function($scope, $http, $sanitize) {
+        $scope.hideMailbox  = false;
+        $scope.hideTemplates  = true;
+
+        $scope.selectMailboxTab = function() {
+                $("#templateTab").removeClass("selected");
+                $("#mailTab").addClass("selected");
+                $scope.hideMailbox  = false;
+                $scope.hideTemplates  = true;
+        }
+
+        $scope.selectTemplateTab = function() {
+                $("#mailTab").removeClass("selected");
+                $("#templateTab").addClass("selected");
+                $scope.hideMailbox  = true;
+                $scope.hideTemplates  = false;
         }
 });
