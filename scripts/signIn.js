@@ -23,6 +23,11 @@ PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
                         console.log("account does not exist");
                 } else if ($scope.password == account.password) {
                         console.log("signed in!");
+                        if (account.accountType == 1) { // redirect if logged in
+                                window.location.href = "buyerDash.html";
+                        } else {
+                                window.location.href = "sellerDash.html";
+                        }
                 } else {
                         console.log("invalid!");
                 }
