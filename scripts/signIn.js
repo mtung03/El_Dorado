@@ -1,6 +1,8 @@
 PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
         $scope.username = "";
         $scope.password = "";
+        $scope.hideError = true;
+        $scope.errorMessage = "Invalid Password";
 
         $scope.validAccounts = {};
 
@@ -20,15 +22,19 @@ PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
                 var account = $scope.validAccounts[$scope.username];
 
                 if (account == undefined) {
+                        $scope.errorMessage = "Account does not exist";
+                        $scope.hideError = false;
                         console.log("account does not exist");
                 } else if ($scope.password == account.password) {
                         console.log("signed in!");
                         if (account.accountType == 1) { // redirect if logged in
-                                window.location.href = "buyerDash.html";
+                                window.location.href = "/views/buyerDash.html";
                         } else {
-                                window.location.href = "sellerDash.html";
+                                window.location.href = "/views/sellerDash.html";
                         }
                 } else {
+                        $scope.errorMessage = "Invalid Password";
+                        $scope.hideError = false;
                         console.log("invalid!");
                 }
         }

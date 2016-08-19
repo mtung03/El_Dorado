@@ -15,6 +15,7 @@
 
 <body ng-controller="SignInController">
     <div id="navbar">
+        <a href="/views/index.html"><div class="title"></div></a>
         <div id="choices-div">
             <ul id="index-ul">
                 <a href="signIn.html"><li class="list-elems navbar-buttons">Sign In</li></a>
@@ -30,6 +31,7 @@
     <div id="image-back">
         <form class="form" nonvalidate>
             <h1 class = "title"> Sign In </h1> 
+            <p id="error-message" ng-hide="hideError">{{ errorMessage }}</p>
             <p>
                 <div class= "input-fields">  Username: </div>
                 <input ng-model="username" type="text" ng-keypress="keypressCredentials($event)" class="form-input"/> 
