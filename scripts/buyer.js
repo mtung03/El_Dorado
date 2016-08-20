@@ -49,4 +49,30 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
                 $scope.hideMailbox  = true;
                 $scope.hideRatings  = false;
         }
+
+        $scope.vendorOptions = [];
+
+        $http({
+                method: "GET",
+                url: "/data/vendors.json"
+        }).then(function success(response) {
+                $scope.vendorOptions = response.data;
+                console.log("got vendors");
+                console.log($scope.vendorOptions);
+        }, function error(response) {
+                console.log("could not find vendors");
+        });
+
+        $scope.projectName = "";
+        $scope.description = "";
+        $scope.vendorChoices;
+
+        $scope.createProject = function() {
+                var projectData = "projectName=" + $sanitize($scope.projectName) + "&description=" + $sanitize($scope.description);
+                for (var i = 0; i < $scope.vendorChoices.length; i++) {
+                        projectData += "&vendorChoices=" + $scope.vendorChoices[i];
+                } 
+                console.log($scope.vendorChoices);
+                console.log(projectData);
+        }
 });

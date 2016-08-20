@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html ng-app="Portal">
+<head>
+    <title>New Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"> </script>
+    <script src="/scripts/index.js"></script>
+    <script type="text/javascript" src="/scripts/buyer.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/signUp.css"/>
+
+</head>
+<body ng-controller="BuyerController">
+    <div id="navbar">
+        <a href="/views/index.html"><div id="logo"></div></a>
+        <div id="choices-div">
+            <ul id="index-ul">
+                <a href="signIn.html"><li class="list-elems navbar-buttons">Sign In</li></a>
+                <a href="help.html"><li class="list-elems navbar-buttons">Help</li></a>
+                <a href="about.html"><li class="list-elems navbar-buttons">About</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="white-bar wb-left"></div>   
+    <div class="white-bar wb-right"></div>
+
+    <div id="image-back">
+        <form class="form">
+            <h1 class = "title">Create a New Project</h1> 
+            <p>
+                <div class= "input-fields">Project Name:</div>
+                <input ng-model="projectName" type="text" class= "form-input"/> 
+            </p>
+
+            <p>
+                <div class="input-fields">Description</div>
+                <input ng-model= "description" type="text field" class= "form-input"/> 
+            </p>
+
+            <p>
+                <div class= "input-fields">Select Vendors</div>
+                <select multiple="true" ng-model="vendorChoices" class= "form-input select-style" ng-repeat="vendor in vendorOptions">
+                    <option value="{{vendor.title}}">{{vendor.title}}</option>
+                </select>
+            </p>
+
+            <div ng-click="createProject()" class="request-div">
+                <div class="request-button">Create</div>
+            </div>
+        </form>
+        <div id="footer"></div>
+    </div>
+
+</body>
+</html>

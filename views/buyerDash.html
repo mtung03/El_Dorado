@@ -3,7 +3,7 @@
 <head>
     <title>El Dorado Buyer Dashboard</title>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
     <script type="text/javascript" src="/scripts/index.js"></script>
@@ -38,6 +38,7 @@
 
             <div class="section" id="projects" ng-hide="hideProjects">
                     <div class="section-head">My Projects</div>
+                    <a href="/views/newProject.html">New Project</a>
                     <ul class="project-list" ng-repeat="project in projects">
                         <li class="project-short">{{project.title}}: {{project.dateCreated}}</li>
                     </ul>
