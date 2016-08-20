@@ -381,3 +381,7 @@ font-family: 'Muli', "Courier New";
     margin-right: auto;
 
 }
+
+#description-input {
+    height: 100px;
+}

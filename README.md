@@ -15,7 +15,6 @@ To-Do:
 
 seller_dash - figure out what content will go there
 screen size responsiveness
-make logo for all pages
 general styling and content adding
 BACKEND
 

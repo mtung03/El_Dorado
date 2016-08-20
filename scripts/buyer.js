@@ -100,7 +100,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
         $scope.createProject = function() {
                 var projectData = "projectName=" + $sanitize($scope.projectName) + "&description=" + $sanitize($scope.description);
                 for (var i = 0; i < $scope.vendorChoices.length; i++) {
-                        projectData += "&vendorChoices=" + $scope.vendorChoices[i];
+                        projectData += "&vendorChoices=" + $sanitize($scope.vendorChoices[i]);
                 } 
                 console.log($scope.vendorChoices);
                 console.log(projectData);

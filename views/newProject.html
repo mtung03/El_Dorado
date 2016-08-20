@@ -39,7 +39,7 @@
 
             <p>
                 <div class="input-fields">Description</div>
-                <input ng-model= "description" type="text field" class= "form-input"/> 
+                <textarea id="description-input" ng-model="description" type="text" class="form-input"></textarea>
             </p>
 
             <p>
@@ -47,10 +47,6 @@
                 <div id="vendors" ng-repeat="vendor in vendorOptions">
                     <input type="checkbox" name="selectedVendors" ng-model="vendor.selected" value="{{vendor.title}}">{{vendor.title}}</input>
                 </div>
-                <!--
-                <select multiple="true" ng-model="vendorChoices" class= "form-input select-style" ng-repeat="vendor in vendorOptions">
-                    <option value="{{vendor.title}}">{{vendor.title}}</option>
-                </select> -->
             </p>
 
             <div ng-click="createProject()" class="request-div">
