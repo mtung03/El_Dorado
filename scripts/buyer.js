@@ -14,6 +14,17 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
                 console.log("ERROR");
         });
 
+        $scope.projects = [];
+
+        $http({
+                method: "GET",
+                url: "/data/exampleProjectList.json"
+        }).then(function success(response) {
+                $scope.projects = response.data;
+        }, function error(response) {
+                console.log("could not find projects");
+        });
+
 
         $scope.selectProjectTab = function() {
                 $("#mailTab, #ratingsTab").removeClass("selected");
