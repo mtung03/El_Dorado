@@ -44,9 +44,13 @@
 
             <p>
                 <div class= "input-fields">Select Vendors</div>
+                <div id="vendors" ng-repeat="vendor in vendorOptions">
+                    <input type="checkbox" name="selectedVendors" ng-model="vendor.selected" value="{{vendor.title}}">{{vendor.title}}</input>
+                </div>
+                <!--
                 <select multiple="true" ng-model="vendorChoices" class= "form-input select-style" ng-repeat="vendor in vendorOptions">
                     <option value="{{vendor.title}}">{{vendor.title}}</option>
-                </select>
+                </select> -->
             </p>
 
             <div ng-click="createProject()" class="request-div">
