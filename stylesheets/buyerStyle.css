@@ -53,6 +53,14 @@ td {
         float: left;
         display: inline-block;
         position: relative;
+    margin-top: 10px;
+    margin-left: 11px;
+    height: 40px;
+    width: 200px;
+    padding-left: 20px;
+    display: inline-block;
+    background-image: url("/images/black_logo.jpg");
+
 }
 
 /****** TAB STYLING ********/
