@@ -18,4 +18,9 @@ screen size responsiveness
 general styling and content adding
 BACKEND
 
-Contributors: Suruchi Devanhalli, Chris Moody, and Max Tung
+Tasks for next week:
+Suruchi - styling/design for buyer
+Max - project info page
+Andre - start on backend
+
+Contributors: Suruchi Devanhalli, Chris Moody, Andre Newland and Max Tung
