@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html ng-app="Portal" ng-controller="BuyerProjectController">
+<head>
+    <title>{{project.title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"> </script>
+    <script src="/scripts/index.js"></script>
+    <script type="text/javascript" src="/scripts/project.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/signUp.css"/>
+
+</head>
+<body>
+    <div id="navbar">
+        <a href="/views/index.html"><div id="logo"></div></a>
+        <div id="choices-div">
+            <ul id="index-ul">
+                <a href="signIn.html"><li class="list-elems navbar-buttons">Sign In</li></a>
+                <a href="help.html"><li class="list-elems navbar-buttons">Help</li></a>
+                <a href="about.html"><li class="list-elems navbar-buttons">About</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="white-bar wb-left"></div>   
+    <div class="white-bar wb-right"></div>
+
+    <div id="image-back">
+        <div id="proj-info">
+            <h2>{{project.title}}</h2>
+            <p>{{project.description}}</p>
+            <h4>Quotes</h4>
+            <ul id="quotes" ng-repeat="vendor in project.vendors">
+                <li>{{vendor.name}}</li>
+                    <ul ng-repeat="quote in vendor.quote">
+                        <li>{{quote.item}}: {{quote.price}}</li>
+                    </ul>
+            </ul>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+</html>

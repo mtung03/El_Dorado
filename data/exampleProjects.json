@@ -1,0 +1,15 @@
+{
+    "title":"Chem Lab",
+    "description":"This is a lab for things and i need a bunchof things",
+    "vendors": [ 
+                    {"name":"pyrex", "quote": [
+                                                {"item":"flask", "price":"$20"},
+                                                {"item":"petri dish", "price":"$5"}
+                                              ]
+                    },
+                    {"name":"steel company", "quote": [
+                                                        {"item":"table", "price":"$4"}
+                                                      ]
+                    }
+               ]
+}
