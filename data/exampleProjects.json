@@ -1,15 +1,29 @@
-{
-    "title":"Chem Lab",
-    "description":"This is a lab for things and i need a bunchof things",
-    "vendors": [ 
-                    {"name":"pyrex", "quote": [
-                                                {"item":"flask", "price":"$20"},
-                                                {"item":"petri dish", "price":"$5"}
-                                              ]
-                    },
-                    {"name":"steel company", "quote": [
-                                                        {"item":"table", "price":"$4"}
-                                                      ]
-                    }
-               ]
-}
+[
+    {
+        "title":"Chem Lab",
+        "description":"This is a lab for things and i need a bunchof things",
+        "dateCreated":"Jan 1, 2003",
+        "vendors":[ 
+                        {"name":"pyrex", "quote": [
+                                                    {"item":"flask", "price":"$20"},
+                                                    {"item":"petri dish", "price":"$5"}
+                                                  ]
+                        },
+                        {"name":"steel company", "quote": [
+                                                            {"item":"table", "price":"$4"}
+                                                          ]
+                        }
+                 ]
+    },
+    {
+        "title": "Clean Room",
+        "description":"To keep things clean.",
+        "dateCreated":"Jan 23, 1801",
+        "vendors":[
+                        {"name":"Dyson", "quote":[
+                                                    {"item":"vaccuum", "price":"$55"}
+                                                 ]
+                        }
+                ]
+    }
+]

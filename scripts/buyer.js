@@ -18,7 +18,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $sanitize) {
 
         $http({
                 method: "GET",
-                url: "/data/exampleProjectList.json"
+                url: "/data/exampleProjects.json"
         }).then(function success(response) {
                 $scope.projects = response.data;
         }, function error(response) {
