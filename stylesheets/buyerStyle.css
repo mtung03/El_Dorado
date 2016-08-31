@@ -4,6 +4,10 @@
         position: relative;
 }
 
+a {
+    text-decoration: none;
+}
+
 .mailbox {
         position: relative;
 }
@@ -16,16 +20,45 @@
 
 .section {
         display: inline-block;
-        border: 1px solid black;
         width: 100%;
+        height: 900px;
 }
 
 #projects {
         float: left;
 }
 
+#gear-image {
+
+    height:100px;
+    width:150px;
+    margin-right:0px;
+    
+  
+}
+
+#gear-image img {
+    height: 100%;
+    width: 100%;
+
+    
+}
+
 #mailbox {
         float: right;
+}
+
+#mailbox-image {
+    height:800px;
+    width:100%;
+   
+
+}
+
+#mailbox-image img {
+    height: 90%;
+    width: 100%;
+
 }
 
 td {
@@ -33,9 +66,42 @@ td {
 }
 
 .section-head {
-        text-decoration: underline;
-        text-align: center;
-        border: 1px solid red;
+        padding-top: 20px;
+        font-family: Muli; 
+        font-size: 50px;
+        
+        color: #696969;
+        margin-left:20px;
+
+}
+
+
+
+.newproj-div {
+    width: 200px;
+    height:35px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    border-color:#23C4EB;
+    border-width: 2px;
+    border-radius: 5px;
+    float:center;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.newproj-button {
+    width: 200px;
+    height:35px;
+    font-family: 'Muli', "Courier New";
+    color:#23C4EB;
+    font-weight: 100;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 7px;
+
+    
 }
 
 #logo {
@@ -68,7 +134,7 @@ td {
 /****** TAB STYLING ********/
 
 .tabrow {
-    text-align: center;
+    text-align: left;
     list-style: none;
     padding: 0;
     line-height: 24px;
@@ -78,23 +144,24 @@ td {
     font-family: "Muli", "Courier New";
     font-weight: 100;
     position: relative;
+    padding-left: 10px;
 }
 .tabrow li {
     border: 1px solid #AAA;
-    background: #D1D1D1;
-    background: -o-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background: #23C4EB;
+    background: -o-linear-gradient(top, #ECECEC 50%, #23C4EB 100%);
     background: -ms-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
     background: -moz-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
-    background: -webkit-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
-    background: linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background: -webkit-linear-gradient(top, #23C4EB 50%, #23C4EB 100%);
+    background: linear-gradient(top, #ECECEC 50%, #23C4EB 100%);
     display: inline-block;
     position: relative;
     z-index: 0;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-    text-shadow: 0 1px #FFF;
-    margin: 0 -5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;*/
+    /*text-shadow: 0 1px #FFF;
+    margin: 0 -5px;*/
     padding: 0 20px;
 }
 .tabrow a {
@@ -129,13 +196,13 @@ td {
     left: -6px;
     border-bottom-right-radius: 6px;
     border-width: 0 1px 1px 0;
-    box-shadow: 2px 2px 0 #D1D1D1;
+    box-shadow: 2px 2px 0 #23C4EB;
 }
 .tabrow li:after {
     right: -6px;
     border-bottom-left-radius: 6px;
     border-width: 0 0 1px 1px;
-    box-shadow: -2px 2px 0 #D1D1D1;
+    box-shadow: -2px 2px 0 #23C4EB;
 }
 .tabrow li.selected:before {
     box-shadow: 2px 2px 0 #FFF;
