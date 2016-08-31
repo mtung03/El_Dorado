@@ -33,6 +33,7 @@
         <div id="proj-info">
             <h2>{{project.title}}</h2>
             <p>{{project.description}}</p>
+            <p>Created: {{project.dateCreated}}</p>
             <h4>Quotes</h4>
             <ul id="quotes" ng-repeat="vendor in project.vendors">
                 <li>{{vendor.name}}</li>
