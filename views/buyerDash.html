@@ -6,17 +6,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
-    <script type="text/javascript" src="../scripts/index.js"></script>
-    <script type="text/javascript" src="../scripts/buyer.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    <script type="text/javascript" src="/scripts/index.js"></script>
+    <script type="text/javascript" src="/scripts/buyer.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet"/>
-    <link rel="stylesheet" href="../stylesheets/signInStyle.css"/>   
-    <link rel="stylesheet" href="../stylesheets/buyerStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/signInStyle.css"/>   
+    <link rel="stylesheet" href="/stylesheets/buyerStyle.css"/>
 </head>
 
 <body ng-controller="BuyerController">
 
     <div id="navbar">
-        <a href="../views/index.html"><div id="logo"></div></a>
+        <a href="/views/index.html"><div id="logo"></div></a>
         <div id="choices-div">
             <ul id="index-ul">
                 <a href="/views/index.html"><li class="list-elems navbar-buttons">Sign Out</li></a>
@@ -54,7 +55,11 @@
 
             <div class="section" id="mailbox" ng-hide="hideMailbox">
                 <div class="section-head">Mailbox</div>
-                <div id="mailbox-image"><img src="../images/gmail4.jpg"/></div>
+                <!--div id="mailbox-image"><img src="../images/gmail4.jpg"/></div-->
+                <ul ng-repeat="email in emails">
+                    <li>{{email}}</li>
+                </ul>
+
             </div>
 
             <div class="section" id="ratings" ng-hide="hideRatings">
