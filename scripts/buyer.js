@@ -106,8 +106,8 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
         }
     }
 
-/////////////////// GMAIL STUFF ///////////////////////////////////
-/*****************************************************************/
+///////////////////////////// GMAIL STUFF ///////////////////////////////////
+/***************************************************************************/
 
     // Your Client ID can be retrieved from your project in the Google
     // Developer Console, https://console.developers.google.com
