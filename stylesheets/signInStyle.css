@@ -80,10 +80,10 @@ a {
 
 #choices-div {
     height:40px;
-    width:320px;
+    width:200px;
     float:right;
     display:inline-block;
-    margin-right:0;
+    margin-right:30px;
     padding-top: 10px;
 }
 
@@ -97,10 +97,10 @@ a {
 }
 
 #index-ul {
-    margin:0px;
+    margin-right:0px;
     padding-top:8px;
     height: 40px;
-    width:400px;
+    width:200px;
 }
 
 #sign-in-box {
