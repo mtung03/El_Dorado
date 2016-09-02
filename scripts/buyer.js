@@ -111,6 +111,8 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
 
     // Your Client ID can be retrieved from your project in the Google
     // Developer Console, https://console.developers.google.com
+
+    /* Gotten by Max */
     var CLIENT_ID = '701859890180-pu9670n6bb2jh4fjpoirla81t8rim83j.apps.googleusercontent.com';
 
     var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
@@ -136,44 +138,26 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     function handleAuthResult(authResult) {
         console.log("handleAuthResult");
         if (authResult && !authResult.error) {
-            // Hide auth UI, then load client library.
-            console.log("authorized");
             loadGmailApi();
         } else {
-            // Show auth UI, allowing the user to initiate authorization by
-            // clicking authorize button.
             console.log("not authorized");
         }
     }
 
-      /**
-       * Initiate auth flow in response to user clicking authorize button.
-       *
-       * @param {Event} event Button click event.
-       *
-      function handleAuthClick(event) {
-        console.log("handleAuthClick");
-        gapi.auth.authorize(
-          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-          handleAuthResult);
-        return false;
-      }*/
 
-
-
-      /**
-       * Load Gmail API client library. List labels once client library
-       * is loaded.
-       */
+    /**
+     * Load Gmail API client library. List messages once client library
+     * is loaded.
+     */
     function loadGmailApi() {
         gapi.client.load('gmail', 'v1', listMessagesWithLabel);
     }
 
 
-      /**
-       * Print all Labels in the authorized user's inbox. If no labels
-       * are found an appropriate message is printed.
-       */
+    /**
+     * Print all Labels in the authorized user's inbox. If no labels
+     * are found an appropriate message is printed.
+     */
 
     function listMessagesWithLabel() {
         var request = gapi.client.gmail.users.messages.list({
