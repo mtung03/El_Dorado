@@ -10,7 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"> </script>
     <script src="/scripts/index.js"></script>
     <script type="text/javascript" src="/scripts/signUp.js"></script>
-    <link rel="stylesheet" href="../stylesheets/signUp.css" type="text/css"/>
+
+    <link rel="stylesheet" href="/stylesheets/masterStyle.css" />
+    <link rel="stylesheet" href="/stylesheets/formStyle.css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:light" rel="stylesheet">
 
 </head>
@@ -31,30 +33,30 @@
 
     <div id="image-back">
         <form class="form">
-            <h1 class = "title"> Request For Sign Up </h1> 
+            <h1 class="title"> Request For Sign Up </h1> 
             <p>
-                <div class= "input-fields">  Name: </div>
-                <input ng-model="accountName" type="text" class= "form-input"/> 
+                <div class="input-fields">  Name: </div>
+                <input ng-model="accountName" type="text" class="form-input"/> 
             </p>
 
             <p>
-                <div class= "input-fields">  Company Name: </div>
-                <input ng-model= "companyName" type="text" class= "form-input"/> 
+                <div class="input-fields">  Company Name: </div>
+                <input ng-model="companyName" type="text" class="form-input"/> 
             </p>
 
             <p>
-                <div class= "input-fields">  Account type: </div>
-                <select ng-model="buyerAccount" class= "form-input select-style">
+                <div class="input-fields">  Account type: </div>
+                <select ng-model="buyerAccount" class="form-input select-style">
                     <option value="1">Buyer</option>
                     <option value="0">Seller</option>
                 </select>
             </p>
 
             <p>
-                <div class= "input-fields"> Email: </div>
-                <input ng-model= "email" type="text" class= "form-input" ng-keypress="keypressRequest($event)"/>
+                <div class="input-fields"> Email: </div>
+                <input ng-model="email" type="text" class="form-input" ng-keypress="keypressRequest($event)"/>
             </p>
-            <div ng-click="sendAccountRequest()" class= "request-div">
+            <div ng-click="sendAccountRequest()" class="request-div">
                 <div class="request-button"> Submit </div>
             </div>
         </form>

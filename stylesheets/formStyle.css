@@ -1,4 +1,4 @@
-/* Sign-In Styling */
+/* Sign-In/Sign-Up Styling */
 
 .form {
     width: 400px;
@@ -29,6 +29,9 @@
     font-weight: bold;
 }
 
+.select-style {
+    background-color: #FFFFFF;
+}
 
 .request-div {
     width: 200px;
