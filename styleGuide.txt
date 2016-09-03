@@ -18,7 +18,8 @@ File structure should look like this:
  |   + /* all html files here */
  |
  +--stylesheets
- |   + /* all css files here */
+ |   + masterStyle.css
+ |   + /* rest of css files here */
  |
  +--scripts
  |   + /* all js files here */

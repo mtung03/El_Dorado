@@ -1,100 +1,18 @@
-html {
-    height: 100vh;
-    width: 100vw;
-
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0px;
-}
-
-a {
-    text-decoration: none;
-}
-
-#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
+/* Index page stylesheet */
 
 #image-back {
-    height: 100%;
-    width: 100%;
     background-image: url("/images/background-office.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-#navbar {
-    height: 55px;
-    width: 100%;
-    background-color: #FFFFFF;
-}
-
-.navbar-buttons {
-    border-style: solid;
-    background-color: #23C4EB;
-    border-color: #23C4EB;
-    border-width: 2px;
-    border-radius: 5px;
-}
-
-.list-elems {
-    font-family: 'Muli', "Courier New";
-    color: #FFFFFF;
-    font-weight: 100;
-    font-size: 15px;
-    display: inline;
-    margin-right: 30px;
-    padding: 5px;
-}
-
-.navbar-ul {
-    list-style-type: none;
-}
-
-.navbar-li {
-    
-}
-
-.title-style {
-    margin: 0px;
-    font-family: 'Muli', "Courier New";
-    color: #000000;
-    font-weight: 100;
-    font-size: 30px;
-}
-
-#logo {
-    margin-top: 10px;
-    margin-left: 11px;
-    height: 40px;
-    width: 200px;
-    padding-left: 20px;
-    display: inline-block;
-    background-image: url("/images/black_logo.jpg");
-}
-
+/*
 #index-div {
     height: 55px;
     width: 100%;
     padding-top: 15px;
     overflow: hidden;
-}
+} */
 
-#choices-div {
-    height: 40px;
-    width: 320px;
-    float: right;
-    display: inline-block;
-    margin-right: 0;
-    padding-top: 10px;
-}
-
+/*
 .index-choices {
     font-family: 'Muli', "Courier New";
     color: #FFFFFF;
@@ -103,14 +21,7 @@ a {
     display: inline;
     padding-right: 20px;
 }
-
-#index-ul {
-    margin: 0px;
-    padding-top: 8px;
-    height: 40px;
-    width: 400px;
-}
-
+*/
 .button-signup{
     border-style: solid;
     background-color: #23C4EB;
@@ -129,7 +40,7 @@ a {
 .outer-demo {
     width: 145px;
     height: 30px;
-     border-style: solid;
+    border-style: solid;
     background-color: #23C4EB;
     border-color: #23C4EB;
     border-width: 2px;
@@ -143,7 +54,6 @@ a {
 .button-demo {
     width: 145px;
     height: 30px;
-    font-family: 'Muli', "Courier New";
     color: #FFFFFF;
     font-weight: 100;
     font-size: 17px;
@@ -154,7 +64,6 @@ a {
 .button-words {
     height: 30px;
     width: 190px;
-    font-family: 'Muli', "Courier New";
     color: #FFFFFF;
     font-weight: 100;
     font-size: 17px;
@@ -171,7 +80,6 @@ a {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-family: 'Muli', "Courier New";
     color:  #FFFFFF;
     font-weight: 100;
     font-size: 35px;
@@ -194,7 +102,6 @@ a {
 
 #option1 {
     text-align: center;
-    font-family: 'Muli', "Courier New";
     color: #FFFFFF;
     background-color: rgba(0,0,0,0.3);
     float:left;
@@ -206,7 +113,6 @@ a {
 
 #option2 {
     text-align:center;
-    font-family: 'Muli', "Courier New";
     color:  #FFFFFF;
     background-color: rgba(0,0,0,0.3);
     float:right;
@@ -228,7 +134,6 @@ a {
 }
 
 .style-h2 {
-    font-family: 'Muli', "Courier New";
     color:#FFFFFF;
     font-weight: 100;
     font-size: 20px;
@@ -240,27 +145,6 @@ a {
     text-align:center ;
 }
 
-.white-bar {
-    width:10px;
-    height:100%;
-    background-color: #FFFFFF;  
-}
-
-.wb-left {
-    float:left;
-}
-
-.wb-right {
-    float:right;
-}
-
-#footer {
-    position: fixed;
-    height: 10px;
-    bottom: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-}
 
 .filler {
     height:100px;
