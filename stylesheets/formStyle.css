@@ -1,5 +1,10 @@
 /* Sign-In/Sign-Up Styling */
 
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
 .form {
     width: 400px;
     height: 300px;
