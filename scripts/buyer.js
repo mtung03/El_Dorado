@@ -117,6 +117,8 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
 
     var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
 
+    var LABEL_NAME = 'El_Dorado';
+
     /**
      * Check if current user has authorized this application.
     */
@@ -150,7 +152,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      * is loaded.
      */
     function loadGmailApi() {
-        gapi.client.load('gmail', 'v1', listMessagesWithLabel);
+        gapi.client.load('gmail', 'v1', getLabelId);
     }
 
 
@@ -159,10 +161,11 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      * are found an appropriate message is printed.
      */
 
-    function listMessagesWithLabel() {
+    function listMessagesWithLabel(labelId) {
+        console.log(labelId);
         var request = gapi.client.gmail.users.messages.list({
-          'userId': 'me',
-          'labelIds':'Label_20'
+            'userId': 'me',
+            'labelIds': labelId
         });
 
         request.execute(function(resp) {
@@ -170,7 +173,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
 
             var messageIds = [];
             if (messages && messages.length > 0) {
-                for (i = 0; i < 10; i++) {
+                for (i = 0; i < messages.length; i++) {
                     messageIds.push(messages[i].id);
                 }
             } else {
@@ -178,7 +181,34 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
             }
             displayMessages(messageIds);
         });
-    } 
+    }
+
+    function getLabelId() {
+        var request = gapi.client.gmail.users.labels.list({
+            'userId':'me'
+        });
+
+        request.execute(function(resp) {
+            var labels = resp.labels;
+            console.log(labels);
+
+            if (labels && labels.length > 0) {
+                var labelId = '';
+                for (i = 0; i < labels.length; i++) {
+                    if (labels[i].name == LABEL_NAME) {
+                        console.log("found");
+                        labelId = labels[i].id;
+                        break;
+                    }
+                }
+                if (labelId == '') {
+                    /* create label */
+                }
+                listMessagesWithLabel(labelId);
+            }
+        });
+        console.log("going back");
+    }
 
     function displayMessages(ids) {
         console.log("displaying");
