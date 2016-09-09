@@ -115,7 +115,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     /* Gotten by Max */
     var CLIENT_ID = '701859890180-pu9670n6bb2jh4fjpoirla81t8rim83j.apps.googleusercontent.com';
 
-    var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
+    var SCOPES = ['https://www.googleapis.com/auth/gmail.modify'];
 
     var LABEL_NAME = 'El_Dorado';
 
@@ -128,7 +128,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
         {
             'client_id': CLIENT_ID,
             'scope': SCOPES.join(' '),
-            'immediate': true
+            'immediate': false
         }, handleAuthResult);
     }
 
@@ -138,7 +138,8 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      * @param {Object} authResult Authorization result.
      */
     function handleAuthResult(authResult) {
-        console.log("handleAuthResult");
+        console.log(authResult);
+
         if (authResult && !authResult.error) {
             loadGmailApi();
         } else {
@@ -202,9 +203,19 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                     }
                 }
                 if (labelId == '') {
+                    var request = gapi.client.gmail.users.labels.create({
+                        'userId': 'me',
+                        'label': {
+                            'name': LABEL_NAME
+                        }
+                    });
+                    var res = request.execute();
+                    console.log("res");
+                    console.log(res);
                     /* create label */
+                } else {
+                    listMessagesWithLabel(labelId);
                 }
-                listMessagesWithLabel(labelId);
             }
         });
         console.log("going back");
