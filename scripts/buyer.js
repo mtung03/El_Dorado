@@ -115,7 +115,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     /* Gotten by Max */
     var CLIENT_ID = '701859890180-pu9670n6bb2jh4fjpoirla81t8rim83j.apps.googleusercontent.com';
 
-    var SCOPES = ['https://www.googleapis.com/auth/gmail.modify'];
+    var SCOPES = ['https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/gmail.labels'];
 
     var LABEL_NAME = 'El_Dorado';
 
@@ -205,13 +205,13 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                 if (labelId == '') {
                     var request = gapi.client.gmail.users.labels.create({
                         'userId': 'me',
-                        'label': {
-                            'name': LABEL_NAME
-                        }
+                        'labelListVisibility':'labelShow',
+                        'messageListVisibility':'show',
+                        'name': LABEL_NAME
                     });
                     var res = request.execute();
-                    console.log("res");
                     console.log(res);
+                    listMessagesWithLabel(res.id);
                     /* create label */
                 } else {
                     listMessagesWithLabel(labelId);
@@ -219,6 +219,10 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
             }
         });
         console.log("going back");
+    }
+
+    function done() {
+        console.log("requested");
     }
 
     function displayMessages(ids) {
