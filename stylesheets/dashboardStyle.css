@@ -24,6 +24,7 @@ body {
     clear: both;
     margin-bottom:0px;
     margin-left:55px;
+    margin-top:40px;
 }
 
 .section {
@@ -37,7 +38,6 @@ body {
 .section-head {
     margin-top: 50px;
     font-size: 50px;    
-    
     margin-left:55px;
     margin-right:0px;
     width:90%;
@@ -70,7 +70,7 @@ body {
 }
 
 #stock-img {
-    height:250px;
+    height:280px;
     width: 100%;
     background-image:url("/images/stock.jpg");
     background-repeat: no-repeat;
@@ -107,6 +107,7 @@ body {
 
 #mailbox {
     float: right;
+    color: #2CC185;
 }
 
 #mailbox-image {
@@ -143,6 +144,21 @@ body {
     margin-top: 7px;
 }
 
+#ratings {
+    color: #2CC185;
+}
+
+#index-ul {
+    color:#FFF;
+}
+
+#index-ul a {
+    color:#FFF;
+}
+
+#templates {
+   color: #2CC185; 
+}
 /****************** TAB STYLING ******************/
 
 .tabrow {
