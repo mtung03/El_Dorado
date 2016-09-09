@@ -37,7 +37,6 @@ body {
 .section-head {
     margin-top: 50px;
     font-size: 50px;    
-    
     margin-left:55px;
     margin-right:0px;
     width:90%;
@@ -107,6 +106,7 @@ body {
 
 #mailbox {
     float: right;
+    color: #2CC185;
 }
 
 #mailbox-image {
@@ -141,6 +141,18 @@ body {
     font-size: 19px;
     text-align: center;
     margin-top: 7px;
+}
+
+#ratings {
+    color: #2CC185;
+}
+
+#index-ul {
+    color:#FFF;
+}
+
+#index-ul a {
+    color:#FFF;
 }
 
 /****************** TAB STYLING ******************/
