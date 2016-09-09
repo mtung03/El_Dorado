@@ -37,9 +37,9 @@
             <p>Created: {{project.dateCreated}}</p>
             <table>
                 <tr class="table-head">
-                    <td><span ng-click="setNameSort()">Item</span><span ng-hide="!sortByName" ng-click="toggleNameSort()">{{symbols[sortBy[1]]}}</span></td>
-                    <td><span ng-click="setDescriptionSort()">Description</span><span ng-hide="!sortByDescription" ng-click="toggleDescriptionSort()">{{symbols[sortBy[1]]}}</span></td>
-                    <td><span ng-click="setCountSort()">Count</span><span ng-hide="!sortByCount" ng-click="toggleCountSort()">{{symbols[sortBy[1]]}}</span></td>
+                    <td><span ng-click="setNameSort()">Item </span><span ng-hide="!sortByName" ng-click="toggleNameSort()">{{symbols[sortBy[1]]}}</span></td>
+                    <td><span ng-click="setDescriptionSort()">Description </span><span ng-hide="!sortByDescription" ng-click="toggleDescriptionSort()">{{symbols[sortBy[1]]}}</span></td>
+                    <td><span ng-click="setCountSort()">Count </span><span ng-hide="!sortByCount" ng-click="toggleCountSort()">{{symbols[sortBy[1]]}}</span></td>
                 </tr>
                 <tr id="items" ng-repeat="item in project.items">
                     <td>{{item.name}}</td>
