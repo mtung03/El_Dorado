@@ -6,7 +6,10 @@ html {
 
 #image-back {
     background-image: url("/images/background-office.jpg");
+    
 }
+
+
 
 /*
 #index-div {
@@ -107,7 +110,8 @@ html {
 #option1 {
     text-align: center;
     color: #FFFFFF;
-    background-color: rgba(0,0,0,0.3);
+    /*background-color: rgba(0,0,0,0.3);*/
+    background-color: rgba(252,74,26,0.5);
     float:left;
     display:inline-block;
     height: 200px;
