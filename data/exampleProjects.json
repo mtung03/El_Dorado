@@ -4,16 +4,20 @@
         "description":"This is a lab for things and i need a bunchof things",
         "dateCreated":"Jan 1, 2003",
         "vendors":[ 
-                        {"name":"pyrex", "quote": [
-                                                    {"item":"flask", "price":"$20"},
-                                                    {"item":"petri dish", "price":"$5"}
-                                                  ]
-                        },
-                        {"name":"steel company", "quote": [
-                                                            {"item":"table", "price":"$4"}
-                                                          ]
-                        }
-                 ]
+                    {"name":"pyrex", "quote": [
+                                                {"item":"flask", "price":"$20"},
+                                                {"item":"petri dish", "price":"$5"}
+                                              ]
+                    },
+                    {"name":"steel company", "quote": [
+                                                        {"item":"table", "price":"$4"}
+                                                      ]
+                    }
+                 ],
+        "items":[
+                    {"name":"zlask", "description":"50mL glass flask", "count":20},
+                    {"name":"petri dishes", "description":"small glass", "count":50}
+                ]
     },
     {
         "title": "Clean Room",
@@ -24,6 +28,9 @@
                                                     {"item":"vaccuum", "price":"$55"}
                                                  ]
                         }
+                ],
+        "items":[
+                    {"name":"table"}
                 ]
     }
 ]
