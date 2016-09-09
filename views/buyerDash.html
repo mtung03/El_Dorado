@@ -36,26 +36,48 @@
                 <li id="mailTab" ng-click="selectMailboxTab()">Mailbox</li>
                 <li id="ratingsTab" ng-click="selectRatingsTab()">Ratings</a></li>
             </ul>
-
+            
             <div class="section" id="projects" ng-hide="hideProjects">
                 <div class="section-head">
                    <!--  <div id="gear-image"><img src="/images/gears.png"/></div> -->
-                    <div> My Projects </div>
+        <div id="proj-img">
+            <div> My Projects </div>
+                    
+                        
+              <ul id="proj-buttons-ul">
+                <li class="button-option1 option-styles">+ New Project</li>
+                <li class="button-option1 option-styles">Current Projects</li>
+                <li class="button-option1 option-styles"> Past Projects </li>
+            </ul>
+
+            <div id="stock-img">
+                <div id="green">
                 </div>
-                <div class="newproj-div">
+            </div>
+        
+        </div>
+                    
+
+                   <!--  <div class="newproj-div">
                     <a  href="/views/newProject.html"><div class="newproj-button"> + New Project </div> </a>
-                   
+                   </div> -->
+                    <!--  <ul class="project-list" ng-repeat="project in projects">
+                    <li class="project-short"><a href="/views/projectInfo.html">{{project.title}}</a>: {{project.dateCreated}}</li>
+                </ul> -->
                 </div>
                 
-                <ul class="project-list" ng-repeat="project in projects">
-                    <li class="project-short"><a href="/views/projectInfo.html">{{project.title}}</a>: {{project.dateCreated}}</li>
-                </ul>
+              
+                </div>
+                
 
             </div>
 
             <div class="section" id="mailbox" ng-hide="hideMailbox">
-                <div class="section-head">Mailbox</div>
-                <div id="mailbox-image"><img src="/images/gmail4.jpg"/></div>
+                <div class="section-head">Mailbox
+                    <div id="mailbox-image"><img src="/images/gmail4.jpg"/></div>
+
+                </div>
+                
             </div>
 
             <div class="section" id="ratings" ng-hide="hideRatings">
