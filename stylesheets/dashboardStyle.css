@@ -24,6 +24,7 @@ body {
     clear: both;
     margin-bottom:0px;
     margin-left:55px;
+    margin-top:40px;
 }
 
 .section {
@@ -69,7 +70,7 @@ body {
 }
 
 #stock-img {
-    height:250px;
+    height:280px;
     width: 100%;
     background-image:url("/images/stock.jpg");
     background-repeat: no-repeat;
@@ -155,6 +156,9 @@ body {
     color:#FFF;
 }
 
+#templates {
+   color: #2CC185; 
+}
 /****************** TAB STYLING ******************/
 
 .tabrow {
