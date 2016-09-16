@@ -56,10 +56,20 @@
             <div class="section" id="mailbox" ng-hide="hideMailbox">
                 <div class="section-head">Mailbox</div>
                 <!--div id="mailbox-image"><img src="../images/gmail4.jpg"/></div-->
-                <ul ng-repeat="email in emails">
-                    <li>{{email}}</li>
-                </ul>
-
+                <table id="messages">
+                    <tr id="message-headers">
+                        <td>From</td>
+                        <td>Subject</td>
+                        <td>Date</td>
+                    </tr>
+                <tr ng-repeat-start="email in emails">
+                    <td>{{email.From}}</td>
+                    <td>{{email.Subject}}</td>
+                    <td>{{email.Date}}</td>
+                </tr>
+                <tr ng-repeat-end>
+                    <td colspan="3">{{email.Message}}</td>
+                </tr>
             </div>
 
             <div class="section" id="ratings" ng-hide="hideRatings">

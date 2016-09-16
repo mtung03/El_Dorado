@@ -233,13 +233,66 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                 'id': ids[i]
             });
             request.execute(function(resp) {
+                var email  = {};
+                console.log("resp");
+                console.log(resp);
+                email["snippet"] = resp.snippet;
+                for (i = 0; i < resp.payload.headers.length; i++) {
+                    if (resp.payload.headers[i].name == "Subject") {
+                        email["Subject"] = resp.payload.headers[i].value;
+                    } else if (resp.payload.headers[i].name == "Date") {
+                        email["Date"] = resp.payload.headers[i].value;
+                    } else if (resp.payload.headers[i].name == "From") {
+                        email["From"] = resp.payload.headers[i].value;
+                    } else if (email["Subject"] && email["Date"] && email["From"]) {
+                        break;
+                    }
+                }
+                console.log(resp.payload.body.data);
+                var encodedText = resp.payload.body.data;
+                console.log(encodedText);
+                //var betterEncodedText = encodedText.replace(/\s/g, '');
+                email["Message"] = decodeBase64(encodedText); //dealing with newlines
+                $scope.emails.push(email);/*
                 for (i = 0; i < resp.payload.headers.length; i++) {
                     if (resp.payload.headers[i].name == 'Subject') {
                         $scope.emails.push(resp.payload.headers[i].value);
                         break;
                     }
-                }
+                }*/
             });
         }
     }
 });
+
+var decodeBase64 = function(origString) {
+    var codes = {};
+    var b = 0
+    var tempCharCode, a;
+    var l = 0;
+    var decoded = '';
+    var toChar = String.fromCharCode; // returns unicode chars from ints
+    var stringLength = origString.length;
+    var tripped = 0;
+    
+    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    
+    for (var i = 0; i < 64; i++ ) { 
+        codes[alphabet.charAt(i)] = i;
+    }
+
+    for (var j = 0; j < stringLength; j++) {
+        tempCharCode = codes[origString.charAt(j)];
+        b = (b << 6) + tempCharCode;
+        l += 6;
+        while (l >= 8) {
+            if ((a = (b >>> (l -= 8)) & 0xff)) {
+                decoded += toChar(a);
+            }
+            else if((j < (stringLength - 2))) {
+                decoded += toChar(a);
+            }
+        }
+    }
+    return decoded;
+};
