@@ -30,16 +30,16 @@ a {
 
 /************* Navbar Styling ****************/
 #navbar {
-    height: 55px;
+    height: 70px;
     width: 100%;
-    background-color: #FFFFFF;
-    margin-top:20px;
+    background-color: #f7f7f7;
+    
 }
 
 .navbar-buttons {
     border-style: solid;
-    background-color: #23C4EB;
-    border-color: #23C4EB;
+    background-color: #2CC185;
+    border-color: #2CC185;
     border-width: 2px;
     border-radius: 5px;
 }
@@ -55,13 +55,13 @@ a {
 
 
 #logo {
-    margin-top: 10px;
-    margin-left: 50px;
-    height: 40px;
-    width: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    height: 50px;
+    width: 300px;
     padding-left: 20px;
     display: inline-block;
-    background-image: url("/images/black_logo.jpg");
+    /*background-image: url("/images/IndustrySquare.jpg");*/
 }
 
 #choices-div {

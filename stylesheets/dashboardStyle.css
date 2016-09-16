@@ -5,10 +5,10 @@ a {
 }
 
 body {
-    background-color: #E7DFDD;
+    background-color: #f7f7f7;
 }
 #navbar {
-    background-color:#E7DFDD;
+    background-color:#f7f7f7;
 }
 #choices-div {
     width: 220px;
@@ -18,6 +18,11 @@ body {
     position: relative;
 }
 
+#logo {
+    margin-top:15px;
+    margin-left:28px;
+
+}
 .dashboard {
     width: 90%;
     position: relative;
@@ -149,11 +154,11 @@ body {
 }
 
 #index-ul {
-    color:#FFF;
+    color:#f7f7f7;
 }
 
 #index-ul a {
-    color:#FFF;
+    color:#E7DFDD;
 }
 
 #templates {
