@@ -4,6 +4,9 @@ PortalApp.controller("SignInController", function($scope, $http, $sanitize) {
         $scope.hideError = true;
         $scope.errorMessage = "Invalid Password";
 
+        /* move cursor to first field */
+        document.getElementsByTagName('input')[0].focus(); 
+
         $scope.validAccounts = {};
 
         $http({
