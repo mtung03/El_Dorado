@@ -67,3 +67,7 @@ html {
 #error-message {
     color: red;
 }
+
+#description-input {
+    height: 150px;
+}
