@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 
 }
 #image-back {
@@ -21,15 +21,14 @@ body {
     margin-top:30px;
 }
 
-/*
-#index-div {
+/*#index-div {
     height: 55px;
     width: 100%;
     padding-top: 15px;
     overflow: hidden;
-} */
+} 
 
-/*
+
 .index-choices {
     font-family: 'Muli', "Courier New";
     color: #FFFFFF;
@@ -37,8 +36,8 @@ body {
     font-size: 20px;
     display: inline;
     padding-right: 20px;
-}
-*/
+}*/
+
 .button-signup{
     border-style: solid;
     background-color: #23C4EB;
@@ -97,7 +96,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color:  #FFFFFF;
+    color:  #ffffff;
     font-weight: 100;
     font-size: 35px;
     background-color: rgba(0,0,0,0.3);
@@ -109,7 +108,7 @@ body {
     height: 200px;
     width: 804px;
     top: 0;
-    bottom: 0;
+    bottom: 100px;
     left: 0;
     right: 0;
     text-align: center;
