@@ -7,6 +7,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     $scope.mailbox = {};
 
     $window.onload = function () {
+        console.log(decodeBase64("PGh0bWw+TVkgV2VicGFnZTwvaHRtbD4="));
         checkAuth();
     };
 
@@ -16,7 +17,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     }).then(function success(response) {
         $scope.mailbox = response.data;
     }, function error(response) {
-        console.log("ERROR");
+        //console.log("ERROR");
     });
 
     $scope.projects = [];
@@ -27,7 +28,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
     }).then(function success(response) {
         $scope.projects = response.data;
     }, function error(response) {
-        console.log("could not find projects");
+        //console.log("could not find projects");
     });
 
 
@@ -62,11 +63,11 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
         url: "/data/vendors.json"
     }).then(function success(response) {
         $scope.vendors = response.data;
-        console.log("got vendors");
+        //console.log("got vendors");
         $scope.vendorOptions = makeVendorOptions();
-        console.log($scope.vendorOptions);
+        //console.log($scope.vendorOptions);
     }, function error(response) {
-        console.log("could not find vendors");
+        //console.log("could not find vendors");
     });
 
     $scope.projectName = "";
@@ -95,7 +96,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
         $scope.vendorChoices = nv.map(function (vendor) {
             return vendor.title;
         });
-        console.log("ok");
+        //console.log("ok");
     }, true);
 
 
@@ -123,7 +124,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      * Check if current user has authorized this application.
     */
     function checkAuth() {
-        console.log("checkAuth");
+        //console.log("checkAuth");
         gapi.auth.authorize(
         {
             'client_id': CLIENT_ID,
@@ -138,12 +139,12 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      * @param {Object} authResult Authorization result.
      */
     function handleAuthResult(authResult) {
-        console.log(authResult);
+        //console.log(authResult);
 
         if (authResult && !authResult.error) {
             loadGmailApi();
         } else {
-            console.log("not authorized");
+            //console.log("not authorized");
         }
     }
 
@@ -163,7 +164,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
      */
 
     function listMessagesWithLabel(labelId) {
-        console.log(labelId);
+        //console.log(labelId);
         var request = gapi.client.gmail.users.messages.list({
             'userId': 'me',
             'labelIds': labelId
@@ -191,13 +192,13 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
 
         request.execute(function(resp) {
             var labels = resp.labels;
-            console.log(labels);
+            //console.log(labels);
 
             if (labels && labels.length > 0) {
                 var labelId = '';
                 for (i = 0; i < labels.length; i++) {
                     if (labels[i].name == LABEL_NAME) {
-                        console.log("found");
+                        //console.log("found");
                         labelId = labels[i].id;
                         break;
                     }
@@ -210,7 +211,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                         'name': LABEL_NAME
                     });
                     var res = request.execute();
-                    console.log(res);
+                    //console.log(res);
                     listMessagesWithLabel(res.id);
                     /* create label */
                 } else {
@@ -218,15 +219,15 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                 }
             }
         });
-        console.log("going back");
+        //console.log("going back");
     }
 
     function done() {
-        console.log("requested");
+        //console.log("requested");
     }
 
     function displayMessages(ids) {
-        console.log("displaying");
+        //console.log("displaying " + ids.length + " ids");
         for (i = 0; i < ids.length; i++) {
             var request = gapi.client.gmail.users.messages.get({
                 'userId': 'me',
@@ -234,8 +235,8 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
             });
             request.execute(function(resp) {
                 var email  = {};
-                console.log("resp");
-                console.log(resp);
+                //console.log("resp");
+                //console.log(resp);
                 email["snippet"] = resp.snippet;
                 for (i = 0; i < resp.payload.headers.length; i++) {
                     if (resp.payload.headers[i].name == "Subject") {
@@ -245,14 +246,36 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
                     } else if (resp.payload.headers[i].name == "From") {
                         email["From"] = resp.payload.headers[i].value;
                     } else if (email["Subject"] && email["Date"] && email["From"]) {
-                        break;
+                        break;  // can leave loop if we found all relevent info
                     }
                 }
-                console.log(resp.payload.body.data);
+                //console.log(resp.payload.body.data);
                 var encodedText = resp.payload.body.data;
-                console.log(encodedText);
+                //console.log(encodedText);
                 //var betterEncodedText = encodedText.replace(/\s/g, '');
-                email["Message"] = decodeBase64(encodedText); //dealing with newlines
+                var htmlVersion = atob(encodedText.replace(/-/g, '+').replace(/_/g, '/')); // dealing with newlines
+                email["Message"] = "";
+                i = 0;
+                var tagName = "";
+                while (i < htmlVersion.length) {
+                    if (htmlVersion[i] == '<') {
+                        while (htmlVersion[i] != ' ' && htmlVersion[i] != '>') {
+                            i++;
+                            tagName += htmlVersion[i];
+                        }
+                        tagName += htmlVersion[i];
+                        while (htmlVersion[i] != '>') {
+                            i++;
+                        }
+                        i++;
+                    }
+                    if (tagName != "style") {
+                        email["Message"] += htmlVersion[i++];
+                    }
+                }
+                //console.log(email["Message"]);
+                console.log(atob(encodedText.replace(/-/g, '+').replace(/_/g, '/')));
+                //if (email["Subject"] == "Reading for Monday's Class") console.log(encodedText);
                 $scope.emails.push(email);/*
                 for (i = 0; i < resp.payload.headers.length; i++) {
                     if (resp.payload.headers[i].name == 'Subject') {
@@ -266,6 +289,7 @@ PortalApp.controller("BuyerController", function($scope, $http, $window, $saniti
 });
 
 var decodeBase64 = function(origString) {
+    if (!origString) return;
     var codes = {};
     var b = 0
     var tempCharCode, a;
@@ -273,7 +297,6 @@ var decodeBase64 = function(origString) {
     var decoded = '';
     var toChar = String.fromCharCode; // returns unicode chars from ints
     var stringLength = origString.length;
-    var tripped = 0;
     
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     
