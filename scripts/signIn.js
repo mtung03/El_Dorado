@@ -1,7 +1,7 @@
-.controller("SignInController", function($scope, $http, $sanitize, $rootScope, AUTH_EVENTS, AuthService) {
+PortalApp.controller("SignInController", function($scope, $http, $sanitize, $rootScope, AUTH_EVENTS, AuthService) {
     $scope.credentials = {
-        username = "",
-        password = ""
+        username: "",
+        password: ""
     };
     $scope.hideError = true;
     $scope.errorMessage = "Invalid Password";
@@ -12,6 +12,7 @@
     $scope.validAccounts = {};
 
     $scope.verify = function (credentials) {
+        console.log(credentials);
         AuthService.login(credentials).then(function (user) {
             $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
             $scope.setCurrentUser(user);
@@ -55,7 +56,7 @@
 */
     $scope.keypressCredentials = function(keyEvent) {
         if (keyEvent.which === 13) {
-            $scope.verify();
+            $scope.verify($scope.credentials);
         }
     }
 

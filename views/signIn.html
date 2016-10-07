@@ -35,14 +35,14 @@
             <p id="error-message" ng-hide="hideError">{{errorMessage}}</p>
             <p>
                 <div class="input-fields">  Username: </div>
-                <input ng-model="username" type="text" ng-keypress="keypressCredentials($event)" class="form-input"/> 
+                <input ng-model="credentials.username" type="text" ng-keypress="keypressCredentials($event)" class="form-input"/> 
             </p>
 
             <p>
                 <div class= "input-fields">  Password: </div>
-                <input ng-model="password" type="password" ng-keypress="keypressCredentials($event)" class="form-input" /> 
+                <input ng-model="credentials.password" type="password" ng-keypress="keypressCredentials($event)" class="form-input" /> 
             </p>
-            <div ng-click="verify()" class= "request-div">
+            <div ng-click="verify(credentials)" class= "request-div">
                 <div class="request-button"> Submit </div>
             </div>
         </form>
