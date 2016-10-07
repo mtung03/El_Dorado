@@ -5,9 +5,17 @@ html {
 }
 
 .info-content {
-    width: 400px;
+    width: 500px;
     height: 300px;
     margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 100px;
+}
+
+.text-head {
+	font-weight: bold;
+}
+
+#summary {
+	font-weight: bold;
 }
